@@ -7,7 +7,7 @@ MOV BX, 0010H
 MOV CX,AX; An register is required to initializ (Immediate Mode)
 
 ADD AX,BX ; Register mode
-
+;Displacement or direct mode – In this type of addressing mode the effective address is directly given in the instruction as displacement.
 MOV [0500H],AX
 MOV CX,[0500H] ; Direct Mode 
 
