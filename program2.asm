@@ -20,6 +20,7 @@ MOV [SI], AX  ; Move the value in AX into the memory
 
 ;Based indexed mode – In this the effective address is sum of base register and index register.
 MOV AX, [BX+SI+100H] ; Based Indexed displacement Mode 
+;Indexed mode – In this type of addressing mode the effective address is sum of index register and displacement.
 MOV AX, [SI+100H} ; Indexed Mode
 MOV AX, [BX+SI]; Base Indexed mode
 
