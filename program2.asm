@@ -11,6 +11,8 @@ ADD AX,BX ; Register mode
 MOV [0500H],AX
 MOV CX,[0500H] ; Direct Mode 
 
+;Register indirect mode – In this addressing mode the effective address is in SI, DI or BX.
+Physical Address = Segment Address + Effective Address
 ;Register InDirect Mode
 MOV AX, 2000H     ; Move the value 0 into AX
 MOV SI, 1000H ; Move the value 1000h into SI
