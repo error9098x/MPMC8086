@@ -1,0 +1,12 @@
+array DB 01H, 02H, 03H, 04H, 05H ; define an array of 5 bytes and initialize its values
+array_size equ 5                 ; define a constant to hold the size of the array
+mov cx, 5              ; initialize the loop counter to the size of the array
+mov bx, offset array             ; initialize the source index to the start of the array
+
+
+next: mov al, [bx]                   
+      add al, 10h                    ; 
+      mov [bx], al                  
+      add bx,1                     
+  loop next:
+ret             
