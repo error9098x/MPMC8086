@@ -11,6 +11,9 @@ next: mov al, [bx]
       mov [bx], al 
       add dl,al                 
       add bx,1                     
-  loop next: 
+  loop next:  
+mov ax, 0000h
+mov al, dl
+div dh
 
-ret             
+ret       
