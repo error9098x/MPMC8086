@@ -1,0 +1,14 @@
+ORG 0H      ; Set the origin of the program
+MOV A, #01H ; Load matrix A, row 1, column 1 into accumulator A
+ADD A, #05H ; Add matrix B, row 1, column 1 to accumulator A
+MOV R0, A   ; Move the result to register R0 (matrix C, row 1, column 1)
+MOV A, #02H ; Load matrix A, row 1, column 2 into accumulator A
+ADD A, #06H ; Add matrix B, row 1, column 2 to accumulator A
+MOV R1,A  ; Move the result to register R1
+MOV A, #03H ; Load matrix A, row 2, column 1 into accumulator A
+ADD A, #07H ; Add matrix B, row 2, column 1 to accumulator A
+MOV R2, A   ; MMove the result to register R2
+MOV A, #04H ; Load matrix A, row 2, column 2 into accumulator A
+ADD A, #08H ; Add matrix B, row 2, column 2 to accumulator A
+MOV R3,A  ; Move the result to register R3
+END      
