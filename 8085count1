@@ -1,0 +1,17 @@
+;count no. of 1 in binary and store in 3000H memory
+MVI A,FFh  ; Move the value FFh into the accumulator
+STA 2000H  ; Store the accumulator value at memory address 2000H
+LDA 2000H  ; Load the content of memory address 2000H into the accumulator
+MVI C,00H  ; Initialize the counter to 0
+MVI H,08H  ; Initialize the high byte of the address to 08H
+Loop1:
+RAR       ; Right shift the content of the accumulator
+JNC Loop  ; Jump to Loop if the carry flag is not set
+INR C     ; Increment the counter
+
+Loop:
+DCR H     ; Decrement the high byte of the address
+JNZ Loop1 ; Jump to Loop1 if the high byte of the address is not zero
+MOV A,C   ; Move the content of the counter to the accumulator
+STA 3000H ; Store the content of the accumulator in memory address 3000H
+HLT       ; Halt the program
